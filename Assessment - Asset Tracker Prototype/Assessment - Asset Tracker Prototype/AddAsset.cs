@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Assessment___Asset_Tracker_Prototype
 {
-    public partial class Form1 : Form
+    public partial class AddAsset : Form
     {
-        public Form1()
+        public AddAsset()
         {
             InitializeComponent();
         }
