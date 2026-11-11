@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbEmployee = new System.Windows.Forms.ComboBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblSystemName = new System.Windows.Forms.Label();
             this.lblManufacturer = new System.Windows.Forms.Label();
@@ -43,19 +43,19 @@
             this.txtModel = new System.Windows.Forms.TextBox();
             this.txtHardwareType = new System.Windows.Forms.TextBox();
             this.txtIPAddress = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtPurchaseDate = new System.Windows.Forms.TextBox();
+            this.txtAdditionalNotes = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cmbEmployee
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(268, 207);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(159, 21);
-            this.comboBox1.TabIndex = 0;
+            this.cmbEmployee.FormattingEnabled = true;
+            this.cmbEmployee.Location = new System.Drawing.Point(268, 207);
+            this.cmbEmployee.Name = "cmbEmployee";
+            this.cmbEmployee.Size = new System.Drawing.Size(159, 21);
+            this.cmbEmployee.TabIndex = 0;
             // 
             // lblTitle
             // 
@@ -179,20 +179,20 @@
             this.txtIPAddress.Size = new System.Drawing.Size(159, 20);
             this.txtIPAddress.TabIndex = 14;
             // 
-            // textBox6
+            // txtPurchaseDate
             // 
-            this.textBox6.Location = new System.Drawing.Point(40, 402);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(159, 20);
-            this.textBox6.TabIndex = 15;
+            this.txtPurchaseDate.Location = new System.Drawing.Point(40, 402);
+            this.txtPurchaseDate.Name = "txtPurchaseDate";
+            this.txtPurchaseDate.Size = new System.Drawing.Size(159, 20);
+            this.txtPurchaseDate.TabIndex = 15;
             // 
-            // textBox7
+            // txtAdditionalNotes
             // 
-            this.textBox7.Location = new System.Drawing.Point(268, 80);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(159, 86);
-            this.textBox7.TabIndex = 16;
+            this.txtAdditionalNotes.Location = new System.Drawing.Point(268, 80);
+            this.txtAdditionalNotes.Multiline = true;
+            this.txtAdditionalNotes.Name = "txtAdditionalNotes";
+            this.txtAdditionalNotes.Size = new System.Drawing.Size(159, 86);
+            this.txtAdditionalNotes.TabIndex = 16;
             // 
             // btnAdd
             // 
@@ -202,6 +202,7 @@
             this.btnAdd.TabIndex = 17;
             this.btnAdd.Text = "Add Asset";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnCancel
             // 
@@ -211,6 +212,7 @@
             this.btnCancel.TabIndex = 18;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // AddAsset
             // 
@@ -220,8 +222,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtAdditionalNotes);
+            this.Controls.Add(this.txtPurchaseDate);
             this.Controls.Add(this.txtIPAddress);
             this.Controls.Add(this.txtHardwareType);
             this.Controls.Add(this.txtModel);
@@ -236,9 +238,10 @@
             this.Controls.Add(this.lblManufacturer);
             this.Controls.Add(this.lblSystemName);
             this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbEmployee);
             this.Name = "AddAsset";
             this.Text = "Add Asset";
+            this.Load += new System.EventHandler(this.AddAsset_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,7 +249,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbEmployee;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblSystemName;
         private System.Windows.Forms.Label lblManufacturer;
@@ -261,8 +264,8 @@
         private System.Windows.Forms.TextBox txtModel;
         private System.Windows.Forms.TextBox txtHardwareType;
         private System.Windows.Forms.TextBox txtIPAddress;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtPurchaseDate;
+        private System.Windows.Forms.TextBox txtAdditionalNotes;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnCancel;
     }
